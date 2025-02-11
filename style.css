@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    background-color: rgb(18, 18, 77);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 23px;
+    list-style: none;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    color: rgb(148, 148, 234);
+    font-size: 15.5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.left {
+    font-size: 1.5rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.firstSection>div {
+    width: 30%;
+    font-size: 3rem;
+}
+
+.rightSection img {
+    width: 90%;
+
+}
+
+.purple {
+    color: rgba(129, 51, 202, 0.607);
+}
+#element{
+    color:rgba(129, 51, 202, 0.607) ;
+}
+
+.secondSection, .thirdSection, .fourthSection {
+    padding: 50px 80px;
+    text-align: center;
+}
+
+.secondSection h1, .thirdSection h1, .fourthSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: rgba(129, 51, 202, 0.607);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: rgb(18, 18, 77);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.service-box h2 {
+    color: rgba(129, 51, 202, 0.607);
+    margin-bottom: 15px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(129, 51, 202, 0.607);
+    background-color: transparent;
+    color: white;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(129, 51, 202, 0.607);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(129, 51, 202, 0.8);
+}
+
+/* Add smooth transitions for links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Add hover animation for service boxes */
+.service-box {
+    background-color: rgb(18, 18, 77);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Add pulse animation for buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(129, 51, 202, 0.607);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background-color: rgba(129, 51, 202, 0.8);
+    animation: none;
+}
+
+
+
+/* Add floating animation for images */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.rightSection img {
+    width: 90%;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Add glow effect for headings */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(129, 51, 202, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(129, 51, 202, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(129, 51, 202, 0.3);
+    }
+}
+
+h1 {
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* Add a rotating border animation for service boxes */
+@keyframes rotateBorder {
+    0% {
+        border: 2px solid rgba(129, 51, 202, 0.3);
+    }
+    25% {
+        border: 2px solid rgba(129, 51, 202, 0.5); 
+    }
+    50% {
+        border: 2px solid rgba(129, 51, 202, 0.7);
+    }
+    75% {
+        border: 2px solid rgba(129, 51, 202, 0.5);
+    }
+    100% {
+        border: 2px solid rgba(129, 51, 202, 0.3);
+    }
+}
+
+.service-box {
+    animation: rotateBorder 3s linear infinite;
+}
+
+/* Add a ripple effect on button click
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(129, 51, 202, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(129, 51, 202, 0);
+    }
+}
+
+button:active {
+    animation: ripple 0.6s linear;
+} */
+
+/* Add a gradient background animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, rgb(0, 0, 33), rgb(18, 18, 77), rgb(0, 0, 33));
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+}
